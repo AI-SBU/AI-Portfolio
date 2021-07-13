@@ -11,4 +11,5 @@ navLinks.forEach(link=>{
     })
 });
 
+console.log('whats')
 console.log('sup')
