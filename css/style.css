@@ -31,6 +31,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
+        --fs-h4: 1.45rem;
         --fs-body: 1.125rem;
     }
 }
@@ -91,7 +92,8 @@ strong { font-weight: var(--fw-bold); }
 
 h1,
 h2,
-h3 {
+h3,
+h4{
     line-height: 1;
     margin: 0;
 }
@@ -99,6 +101,7 @@ h3 {
 h1{ font-size: var(--fs-h1) }
 h2{ font-size: var(--fs-h2) }
 h3{ font-size: var(--fs-h3) }
+h4{ font-size: var(--fs-h4) }
 
 
 .section__title{
@@ -115,10 +118,10 @@ h3{ font-size: var(--fs-h3) }
 
 .section__subtitle{
     margin: 0;
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
 }
 
-.section__subtitle--into,
+.section__subtitle--intro,
 .section__subtitle--about{
     background: var(--clr-accent);
     padding: .25em 1em;
@@ -141,7 +144,7 @@ header{
 
 .nav{
     position: fixed;
-    background: var(--clr-dark);
+    background: var(--clr-accent); /*change this color*/
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -246,7 +249,7 @@ header{
     box-shadow: var(--bs);
 }
 
-.section__subtitle--into{
+.section__subtitle--intro{
     display: inline-block;
 }
 
@@ -269,7 +272,7 @@ header{
         z-index: 2;
     }
 
-    .section__subtitle--into{
+    .section__subtitle--intro{
         align-self: start;
         grid-column: -1 / 1;
         grid-row: 2;
