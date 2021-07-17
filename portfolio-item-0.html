@@ -44,18 +44,37 @@
 <!-- Projects -->
 <section class="intro" >
     <h1 class="section__title section__title--intro">
-        The title <strong>of my project</strong>
+         <strong>Hardware Generation Tool</strong>
     </h1>
-    <p class="section__subtitle section__subtitle--intro">A short subtitle</p>
-    <img src="img/aIqbal_1.png" alt="" class="intro__img">
+    <p class="section__subtitle section__subtitle--intro">Evaluating a neural network</p>
+    <img src="img/neurons.PNG" alt="" class="intro__img">
 </section>
 
 
 <div class="portfolio-item-individuals">
-    <p></p>
-    <img src="img/services-bg.jpg" alt="">
-    <p></p>
-    <p></p>
+    <p>
+        The goal of this project is to create a tool to generate hardware designs. The tool will take in specifications
+        and generate synthesizable designs. The great thing about this design is its flexibility.
+    </p>
+    <img src="img/NNparameters.png" alt="single layer parameters">
+    <p>
+        The users can generate designs using various different parameters. Some off the parameters
+        being the matrix dimensions, the bit-width, rectified linear unit, stages of parallelism etc.
+        Designers have to deal with various trade-off. For example, cost vs throughput, power vs
+        throughput etc. Analysing the synthesis report, the user can choose the adequate design.
+    </p>
+    <img src="img/NN-all-layers.PNG" alt="3 layers parameters">
+    <p>
+        The final design consisted of 3 layers. The design contained an optimizer to find the stages
+        parallelism needed in each layer to maximize the throughput of the neural network. This makes the
+        tool more robust. In this design we were focused on maximizing throughput and disregarding the
+        increase in cost, power etc.
+    </p>
+    <p>
+        Two people including me worked on this design. The languages used were SystemVerilog and C++.
+        The simulation tool used was ModelSim. The synthesis tool used was DesignCompiler.
+
+    </p>
 </div>
 
 <!-- Footer -->
