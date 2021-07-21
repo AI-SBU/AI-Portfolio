@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--makes sure website is performing normally regardless of the devices dimensions-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asif Iqbal Portfolio Website</title>
+  <!--making sure the this runs on every browser-->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+        crossorigin="anonymous" />
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img class="pfp" src="img/logo.PNG" alt="">
+  </div>
+  <!-- toggle button for navigation-->
+  <button class="nav-toggle" aria-label="toggle navigation">
+    <span class="hamburger"></span>
+  </button>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html" class="nav__link">Home</a> </li>
+      <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a> </li>
+      <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a> </li>
+      <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a> </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Projects -->
+<section class="intro" >
+  <h1 class="section__title section__title--intro">
+    <strong>Banking System Simulation</strong>
+  </h1>
+  <p class="section__subtitle section__subtitle--intro">of a day in a bank</p>
+  <img src="img/bank-1.jpg" alt="" class="intro__img">
+</section>
+
+
+<div class="portfolio-item-individuals">
+  <p>
+    The goal of this project is to simulate a banking system. In a bank, there are certain number of tellers available.
+    People go in a bank to withdraw, deposit, print transactions, open an account etc. The customers waits in a queue.
+    Depending on the number of tellers available, this process can take some time.
+  </p>
+  <p>
+    The program takes in the number of tellers and customers as an input and randomly generates the tasks the customers
+    want to perform. The customers can perform 1 or all 3 tasks, withdraw, deposit and print recent transactions.
+  </p>
+  <p>
+    Currently, working on making a record system to store the customers information. This helps further analyzing
+    different scenarios.
+  </p>
+  <p>
+    The project development and testing was done by me. Used C++.
+  </p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <a href="mailto:iqbalsbu@gmail.com" class="footer__link">iqbalsbu[at]gmail[dot]com</a>
+  <ul class="social-list">
+    <li class="social-list__item">
+      <a class="social--list__link" href="https://github.com/AI-SBU">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  </ul>
+</footer>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
