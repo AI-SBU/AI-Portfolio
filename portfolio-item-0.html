@@ -53,22 +53,41 @@
 
 <div class="portfolio-item-individuals">
     <p>
-        The goal of this project is to create a tool to generate hardware designs. The tool will take in specifications
-        and generate synthesizable designs. The great thing about this design is its flexibility.
+        The goal of this project is to create a tool to generate hardware designs. The tool will take in user
+        specifications and generate synthesizable designs. The great thing about this design is its flexibility.
     </p>
-    <img src="img/NNparameters.png" alt="single layer parameters">
+
+    <p>
+        This tool generates a fully connected Neural Network evaluation layer. Given a set of weights, the layer
+        computes outputs based on its inputs. The set of neurons takes the same set of inputs but has a different
+        set of weights. The set of input is them multiplied by the weights and summed.
+    </p>
+
+
     <p>
         The users can generate designs using various different parameters. Some off the parameters
-        being the matrix dimensions, the bit-width, rectified linear unit, stages of parallelism etc.
+        being the matrix dimensions, the bit-width,to use rectified linear unit or not, stages of parallelism etc.
         Designers have to deal with various trade-off. For example, cost vs throughput, power vs
-        throughput etc. Analysing the synthesis report, the user can choose the adequate design.
+        throughput etc. This tool allows users to generate various designs easily, Analysing the synthesis report,
+        for each designs, the user can choose the adequate design.
     </p>
+
+    <img src="img/NNparameters.png" alt="single layer parameters">
+
+    <p>
+        The tool design consisted of three modules. A control, datapath, memory and top level module. Datapath modules
+        performs all operations in the system. The control module tells the datapath, what to do and when to do it. The
+        memory modules contains the inputs to the system. The top level modules were used to interconnect these modules.
+        The input/output streaming protocol used is a simplified version of ARM's AXI4-Stream Protocol. This protocol
+        allows data transfer between a sender and receiver when both sides are ready.
+    </p>
+
     <img src="img/NN-all-layers.PNG" alt="3 layers parameters">
+
     <p>
         The final design consisted of 3 layers. The design contained an optimizer to find the stages
-        parallelism needed in each layer to maximize the throughput of the neural network. This makes the
-        tool more robust. In this design we were focused on maximizing throughput and disregarding the
-        increase in cost, power etc.
+        parallelism needed in each layer to maximize the throughput of the neural network disregarding the increase in
+        cost and power.
     </p>
     <p>
         Two people including me worked on this design. The languages used were SystemVerilog and C++.

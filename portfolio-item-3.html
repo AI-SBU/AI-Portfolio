@@ -44,29 +44,43 @@
 <!-- Projects -->
 <section class="intro" >
   <h1 class="section__title section__title--intro">
-    <strong>Banking System Simulation</strong>
+    <strong>Clustering with K-Means and GMM</strong>
   </h1>
-  <p class="section__subtitle section__subtitle--intro">of a day in a bank</p>
-  <img src="img/bank-1.jpg" alt="" class="intro__img">
+  <p class="section__subtitle section__subtitle--intro">on a sample dataset</p>
+  <img src="img/clusters.jpg" alt="" class="intro__img">
 </section>
 
 
 <div class="portfolio-item-individuals">
   <p>
-    The goal of this project is to simulate a banking system. In a bank, there are certain number of tellers available.
-    People go in a bank to withdraw, deposit, print transactions, open an account etc. The customers waits in a queue.
-    Depending on the number of tellers available, this process can take some time.
+    The goal of the project is the apply clustering algorithms to group closely related data points on a 2-D grid and
+    analyze which algorithm has the best performance in our dataset. There are numerous applications of clustering.
+    One example, clustering can be used to predict if an engine is stable based on prior information of stable engines.
+    In our case, we used clustering on a sample dataset.
   </p>
+
+  <img src="img/raw_data.png" alt="Raw Dataset Plot">
+
   <p>
-    The program takes in the number of tellers and customers as an input and randomly generates the tasks the customers
-    want to perform. The customers can perform 1 or all 3 tasks, withdraw, deposit and print recent transactions.
+    The program drew data samples from a multivariate-gaussian distribution with specified mean and covariance. Two
+    clustering algorithm was was applied to this data-set. They are Gaussian Mixture Model(GMM) and K-Means Algorithm.
+    Optimal number of clusters were found using Bayesian Information Criterion(BIC) and Elbow Method for GMM and
+    K-Means, respectively. BIC yielded 8 clusters and Elbow method yielded 7 clusters.
   </p>
+
+  <img src="img/gmm_clusters.png" alt="Eight clusters GMM">
+
   <p>
-    Currently, working on making a record system to store the customers information. This helps further analyzing
-    different scenarios.
+    Silhouette Score was used as an evaluation metric. This score ranges from -1 to 1, where 1 being the best and -1
+    being the worst. A score near 0 suggests overlapping clusters. It yielded a score of 0.57 and 0.53 for K-Means and
+    GMM algorithm, respectively. On this data-set, K-Means algorithm performed slightly better.
   </p>
+
+  <img src="img/kmeans_clusters.png" alt="Seven kmeans clusters">
+
   <p>
-    The project development and testing was done by me. Used C++.
+    Two people including me worked in this project. Used python. Libraries such as sklearn, pandas, numpy, matplotlib
+    etc. were used.
   </p>
 </div>
 

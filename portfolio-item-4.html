@@ -44,28 +44,46 @@
 <!-- Projects -->
 <section class="intro" >
   <h1 class="section__title section__title--intro">
-    <strong>Clustering with K-Means and GMM</strong>
+    <strong>Logistic Regression</strong>
   </h1>
-  <p class="section__subtitle section__subtitle--intro">on a sample dataset</p>
-  <img src="img/bank-1.jpg" alt="" class="intro__img">
+  <p class="section__subtitle section__subtitle--intro">to determine an Electric Grid stability</p>
+  <img src="img/logistic-1.png" alt="" class="intro__img">
 </section>
 
 
 <div class="portfolio-item-individuals">
   <p>
-    The goal of the project is the apply clustering algorithms to group closely related data points on a 2-D grid.
-    There are numerous applications of clustering. One example, clustering can be used to predict if an engine
-    is stable based on prior information of stable engines. In our case, we used clustering on a sample dataset. The
-    idea was to get familiar with the clustering algorithms.
+    The goal of this project is apply logistic regression to determine whether an electrical grid is stable or not.
+    This technique yields a binary result, 0 or 1. One meaning the grid is stable and Zero means it's unstable. This
+    variation of regression model was created to used in survivability analysis. However, we can use it to determine
+    stability as well.
+  </p>
+
+  <p>
+    To build a good model, the explanatory variables that have the greatest effect on the predictions must be chosen.
+    This was done by looking at the p-values for each explanatory variables. The most relevant ones were chosen for
+    this model.
+  </p>
+
+  <img src="img/imbalanced_classes.png" alt="Imbalanced Classes">
+
+  <p>
+    Initially, plotting the data-set, imbalance between the two classes were noticed. This was fixed using
+    down-sampling. For numeric analysis, confusion matrix was created.The model predicted 0, when the actual value is
+    0, 546 times. The model predicted 0, when the actual value is 1, 200 times. The model predicted 1, when the actual
+    value is 1, 519 times. The model predicted 1, when the actual value is 0, 183 times. The model has an accuracy
+    of 73.55%.
+  </p>
+
+  <img src="img/confusion_matrix.png" alt="Confusion Matrix">
+
+  <p>
+    Using evaluation metric such as McFadden's method, a pseudo-r-squared of 0.1971 was achieved. Via his method,
+    0.2 is considered as an excellent score. Therefore, the model came out to be quite good.
   </p>
   <p>
-    The program drew data samples from a multivariate-gaussian distribution with specified mean and covariance. 2
-    clustering algorithm was was applied to this data. The evaluation matrix for each was compared to find which of
-    the 2 algorithm is optimal. In our case, K-Means algorithm performed slightly better
-  </p>
-  <p>
-    Two people including me worked in this project. Used python. Libraries such as sklearn, pandas, numpy, matplotlib
-    etc. was used.
+    Two people including me worked in this project. Used python and matlab. Libraries such as sklearn, pandas, numpy,
+    matplotlib etc. was used.
   </p>
 </div>
 
